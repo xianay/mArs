@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen>
+****************************************
+Payment
+****************************************
+Please, Input money for payment.
+
+Flight : A100
+Departure Airport : Xi’an
+Arrival Airport : Incheon
+Depart Date : 2014-12-24
+Depart Time : 10:00
+Passenger : 4 Adult, 10 Child
+Seat Class : Economy Class
+Total Amount : 18000 Yuan
+
+P. Previous Menu
+Q. Quit
+****************************************
+</screen>

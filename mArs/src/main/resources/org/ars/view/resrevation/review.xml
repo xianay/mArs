@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen>
+****************************************
+Review
+****************************************
+Please, Input any key.
+
+Flight : A100
+Departure Airport : Xi’an
+Arrival Airport : Incheon
+Depart Date : 2014-12-24
+Depart Time : 10:00
+Passenger : 4 Adult, 10 Child
+Seat Class : Economy Class
+Total Amount : 18000 Yuan
+Payment : 20000 Yuan
+Change : 2000 Yuan
+Reservation Number : A100XI20140302170723
+****************************************
+Thank you for reservation!
+</screen>

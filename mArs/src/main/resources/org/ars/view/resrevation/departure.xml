@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen>
+****************************************
+Departure Airport
+****************************************
+<each list="${departures}"/>
+P. Previous Menu
+Q. Quit
+****************************************
+</screen>

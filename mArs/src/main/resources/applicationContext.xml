@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- dataSource -->
+	<bean id="planeProperties" class="org.ars.properties.PlaneProperties">
+		<constructor-arg name="file" value="plane.properties"/>
+	</bean>
+	
+	
+	<!-- Entrance -->
+	<bean id="main" class="org.ars.start.Ars">
+		<!-- initial screen -->
+		<property name="state" ref="indexScreen"/>
+	</bean>
+	
+	<!-- Exception -->
+	<!-- 非法输入参数错误 -->
+	<bean id="illegalInputException" class="org.ars.exception.IllegalInputException" scope="prototype">
+		<property name="message" value="Wrong Input. Select Again."/>
+	</bean>
+	<!-- 出发地与到达地相同错误 -->
+	<bean id="sameAirportasDepartureException" class="org.ars.exception.SameAirportasDepartureException" scope="prototype">
+		<property name="message" value="Can’t select the same airport as Departure."/>
+	</bean>
+	<!-- 日期格式错误 -->
+	<bean id="dateFormatInputException" class="org.ars.exception.DateFormatInputException" scope="prototype">
+		<property name="message" value="You have to input date in right format."/>
+	</bean>
+	<!-- 日期输入范围错误 -->
+		<bean id="dateRangeInputException" class="org.ars.exception.DateRangeInputException"  scope="prototype">
+		<property name="message" value="You can input date from ${tomorrow} to ${nextyear} ."/>
+	</bean>
+	<!-- 乘客人数错误 -->
+		<bean id="numberOfPassengerInputException" class="org.ars.exception.NumberOfPassengerInputException" scope="prototype">
+		<property name="message" value="You have toinput more than 0."/>
+	</bean>
+	<!-- 钱数不足错误 -->
+	<bean id="notEnoughMoneyException" class="org.ars.exception.NotEnoughMoneyException" scope="prototype">
+		<property name="message" value="Not enough money."/>
+	</bean>
+	<!-- 没有该预定号码错误 -->
+	<bean id="noReservationNumberException" class="org.ars.exception.NoReservationNumberException" scope="prototype">
+		<property name="message" value="There is no such data."/>
+	</bean>
+	
+	<!-- screen -->
+	<!-- 初始的界面 -->
+	<bean id="indexScreen" class="org.ars.screen.IndexScreen">
+		<property name="file" value="org/ars/view/index.xml"/>		
+	</bean>
+	<bean id="departureScreen" class="org.ars.screen.DepartureScreen">
+		<property name="file" value="org/ars/view/resrevation/departure.xml"/>		
+	</bean>
+	<bean id="arrivalScreen" class="org.ars.screen.ArrivalScreen">
+		<property name="file" value="org/ars/view/resrevation/arrival.xml"/>		
+	</bean>
+	<!-- 出发日期界面 -->
+	<bean id="departDateScreen" class="org.ars.screen.DepartDateScreen">
+		<property name="file" value="org/ars/view/resrevation/depart-date.xml"/>		
+	</bean>
+	<!-- 出发航班时间界面 -->
+	<bean id="departTimeScreen" class="org.ars.screen.DepartTimeScreen">
+		<property name="file" value="org/ars/view/resrevation/depart-time.xml"/>		
+	</bean>
+	<!-- 选择成人乘客界面 -->
+	<bean id="passengerAdultScreen" class="org.ars.screen.PassengerAdultScreen">
+		<property name="file" value="org/ars/view/resrevation/passenger-adult.xml"/>		
+	</bean>
+	<!-- 选择儿童乘客界面 -->
+	<bean id="passengerChildScreen" class="org.ars.screen.PassengerChildScreen">
+		<property name="file" value="org/ars/view/resrevation/passenger-child.xml"/>		
+	</bean>
+	<bean id="seatScreen" class="org.ars.screen.SeatScreen">
+		<property name="file" value="org/ars/view/resrevation/seat.xml"/>		
+	</bean>
+	<bean id="paymentScreen" class="org.ars.screen.PaymentScreen">
+		<property name="file" value="org/ars/view/resrevation/payment.xml"/>		
+	</bean>
+	<bean id="reviewScreen" class="org.ars.screen.ReviewScreen">
+		<property name="file" value="org/ars/view/resrevation/review.xml"/>		
+	</bean>
+	<bean id="checkReservationScreen" class="org.ars.screen.CheckReservationScreen">
+		<property name="file" value="org/ars/view/check-reservation.xml"/>		
+	</bean>
+	
+	
+</beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen>
+****************************************
+Seat Class
+****************************************
+1. First Class (4000 Yuan)
+2. Business Class (3000 Yuan)
+3. Economy Class (2000 Yuan)
+P. Previous Menu
+Q. Quit
+****************************************
+<error>Message : ERROR!!! You have toinput more than 0.</error>
+</screen>
